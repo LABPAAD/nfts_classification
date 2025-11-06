@@ -27,20 +27,20 @@ O pipeline de pesquisa e experimentação, contido nos notebooks, segue os segui
 - Diversos classificadores de machine learning foram treinados e avaliados (Random Forest, SVM, Decision Tree, Logistic Regression).
 - Os experimentos foram divididos em três cenários principais, cujos resultados estão nos CSVs:
 1.  **`results_only_emb.csv`**: Classificação usando apenas os embeddings de texto.
-2.  **`results_only_extra.csv`**: Classificação usando apenas features extras (metadados).
-3.  **`results_emb_extra.csv`**: Classificação usando a combinação de embeddings e features extras.
+2.  **`results_only_extra.csv`**: Classificação usando apenas dados estatísticos.
+3.  **`results_emb_extra.csv`**: Classificação usando a combinação de embeddings e dados estatísticos.
 
 ---
 
 ## Estrutura do Repositório
 
 * **/code**: Contém os notebooks Jupyter com todo o fluxo de trabalho.
-  * `embeddings_code.ipynb`: Notebook principal com o pipeline de pré-processamento, geração de embeddings, treinamento e avaliação dos modelos.
-  * `Samuel_Embeddings[Exec-Local].ipynb`: Versão do notebook para execução e testes locais.
+* `embeddings_code.ipynb`: Notebook principal com o pipeline de pré-processamento, geração de embeddings, treinamento e avaliação dos modelos.
+* `Samuel_Embeddings[Exec-Local].ipynb`: Versão do notebook para execução e testes locais.
 * **/data/results**: Contém os resultados detalhados dos experimentos.
-  * `Resultados 7 Categorias (BRACIS 2025) - results_emb_extra.csv`: Métricas (Acurácia, Precisão, Recall, F1, AUROC) para os modelos com features combinadas.
-  * `Resultados 7 Categorias (BRACIS 2025) - results_only_emb.csv`: Métricas para os modelos usando apenas embeddings.
-  * `Resultados 7 Categorias (BRACIS 2025) - results_only_extra.csv`: Métricas para os modelos usando apenas features extras.
+* `Resultados 7 Categorias (BRACIS 2025) - results_emb_extra.csv`: Métricas (Acurácia, Precisão, Recall, F1, AUROC) para os modelos com embeddings e dados estatísticos.
+* `Resultados 7 Categorias (BRACIS 2025) - results_only_emb.csv`: Métricas para os modelos usando apenas embeddings.
+* `Resultados 7 Categorias (BRACIS 2025) - results_only_extra.csv`: Métricas para os modelos usando apenas dados estatísticos.
 
 ---
 
