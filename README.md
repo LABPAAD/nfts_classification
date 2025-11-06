@@ -1,0 +1,2 @@
+# Classification of NFT Collections
+
