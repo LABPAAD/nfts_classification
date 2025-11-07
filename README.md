@@ -63,9 +63,9 @@ O pipeline de pesquisa e experimentação, contido nos notebooks, segue os segui
    
 ---
 
-> Confira o Aplicativo Web!
->
-> Além desta pesquisa, foi desenvolvido um aplicativo web (Flask) que consome o modelo treinado.
->
-> **Acesse o repositório da aplicação: (https://github.com/markesley/NFT-Classifier)**
+## Aplicativo
+
+Além desta pesquisa, foi desenvolvido um aplicativo web (Flask) que consome o modelo treinado.
+ 
+* Repositório da aplicação: (https://github.com/markesley/NFT-Classifier)
 
