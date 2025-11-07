@@ -1,4 +1,4 @@
-# Classificação de Coleções de NFTs (Artigo BRACIS 2025)
+# Classificação de Coleções de NFTs (Artigo BRACIS)
 
 Este repositório contém os códigos-fonte, notebooks Jupyter e resultados experimentais utilizados no artigo de pesquisa **"NFT Collection Classification: A Multimodal
 Approach Integrating Metadata and Textual
@@ -62,4 +62,10 @@ O pipeline de pesquisa e experimentação, contido nos notebooks, segue os segui
 4.  Após a conclusão do primeiro notebook, execute o `Samuel_Embeddings[Exec-Local].ipynb` para carregar os embeddings, treinar os classificadores e gerar os CSVs de resultados finais.
    
 ---
+
+> Confira o Aplicativo Web!
+>
+> Além desta pesquisa, foi desenvolvido um aplicativo web (Flask) que consome o modelo treinado.
+>
+> **Acesse o repositório da aplicação: (https://github.com/markesley/NFT-Classifier)**
 
