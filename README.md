@@ -1,71 +1,77 @@
-# Classificação de Coleções de NFTs (Artigo BRACIS)
+# Classification of NFT Collections
 
-Este repositório contém os códigos-fonte, notebooks Jupyter e resultados experimentais utilizados no artigo de pesquisa **"NFT Collection Classification: A Multimodal
-Approach Integrating Metadata and Textual
-Embeddings with Supervised Learning"**, submetido ao BRACIS.
+This repository contains the source code, Jupyter notebooks, and experimental results used in the research paper "NFT Collection Classification: A Multimodal Approach Integrating Metadata and Textual Embeddings with Supervised Learning," presented at the 35th Brazilian Conference on Intelligent Systems (Bracis 2025 <link: https://bracis.sbc.org.br/2025/>).
 
-O projeto explora diferentes técnicas de pré-processamento de texto e balanceamento de dados para a classificação de coleções de NFTs em 7 categorias.
+The project explores different text preprocessing and data balancing techniques for classifying NFT collections into 7 categories.
 
 ---
 
-## O Experimento
+## The Experiment
 
-O pipeline de pesquisa e experimentação, contido nos notebooks, segue os seguintes passos:
+The research and experimentation pipeline, contained in the notebooks, follows these steps:
 
-### 1. Preparação dos Dados
-- Os dados textuais (descrições das coleções) foram processados com diferentes técnicas (ex: remoção de stopwords, lematização).
-- As classes alvo são **7 categorias**:
-  ```
-     ['art', 'gaming', 'memberships', 'music', 'pfps', 'photography', 'virtual-worlds']
-  ```
-- Diferentes estratégias de balanceamento de dados foram testadas (ex: SMOTE, oversampling).
+### 1. Data Preparation
+- Textual data (descriptions of the collections) were processed using different techniques (e.g., stopword removal, lemmatization).
 
-### 2. Geração dos Embeddings
-- Foi utilizado um modelo de linguagem da biblioteca `sentence-transformers` (como `paraphrase-multilingual-MiniLM-L12-v2` ou similar) para converter as descrições em vetores numéricos (embeddings).
+- The target classes are **7 categories**:
 
-### 3. Treinamento e Avaliação
-- Diversos classificadores de machine learning foram treinados e avaliados (Random Forest, SVM, Decision Tree, Logistic Regression).
-- Os experimentos foram divididos em três cenários principais, cujos resultados estão nos CSVs:
-1.  **`results_only_emb.csv`**: Classificação usando apenas os embeddings de texto.
-2.  **`results_only_extra.csv`**: Classificação usando apenas dados estatísticos.
-3.  **`results_emb_extra.csv`**: Classificação usando a combinação de embeddings e dados estatísticos.
+```
+['art', 'gaming', 'memberships', 'music', 'pfps', 'photography', 'virtual-worlds']
+```
 
+- Different data balancing strategies were tested (e.g., SMOTE, oversampling).
+
+### 2. Embedding Generation
+- A language model from the `sentence-transformers` library (such as `paraphrase-multilingual-MiniLM-L12-v2` or similar) was used to convert the descriptions into numerical vectors (embeddings).
+
+## 3. Training and Evaluation
+
+- Several machine learning classifiers were trained and evaluated (Random Forest, SVM, Decision Tree, and Logistic Regression).
+
+- The experiments were divided into three main scenarios, the results of which are in the CSVs:
+1. **`results_only_emb.csv`**: Classification using only text embeddings.
+2. **`results_only_extra.csv`**: Classification using only statistical data.
+3. **`results_emb_extra.csv`**: Classification using a combination of embeddings and statistical data.
+   
 ---
 
-## Estrutura do Repositório
+## Repository Structure
 
-* **/code**: Contém os notebooks Jupyter com todo o fluxo de trabalho.
-* `embeddings_code.ipynb`: Notebook principal com o pipeline de pré-processamento, geração de embeddings, treinamento e avaliação dos modelos.
-* `Samuel_Embeddings[Exec-Local].ipynb`: Versão do notebook para execução e testes locais.
-* **/data/results**: Contém os resultados detalhados dos experimentos.
-* `Resultados 7 Categorias (BRACIS 2025) - results_emb_extra.csv`: Métricas (Acurácia, Precisão, Recall, F1, AUROC) para os modelos com embeddings e dados estatísticos.
-* `Resultados 7 Categorias (BRACIS 2025) - results_only_emb.csv`: Métricas para os modelos usando apenas embeddings.
-* `Resultados 7 Categorias (BRACIS 2025) - results_only_extra.csv`: Métricas para os modelos usando apenas dados estatísticos.
+* **/code**: Contains the Jupyter notebooks with the entire workflow.
 
+* `embeddings_code.ipynb`: Main notebook with the pipeline for preprocessing, embedding generation, model training, and evaluation.
+* `Samuel_Embeddings[Exec-Local].ipynb`: Notebook version for local execution and testing.
+
+* **/data/results**: Contains the detailed results of the experiments.
+
+* `Results 7 Categories (BRACIS 2025) - results_emb_extra.csv`: Metrics (Accuracy, Precision, Recall, F1, AUROC) for models with embeddings and statistical data.
+* `Results 7 Categories (BRACIS 2025) - results_only_emb.csv`: Metrics for models using only embeddings.
+* `Results 7 Categories (BRACIS 2025) - results_only_extra.csv`: Metrics for the models using only statistical data.
+  
 ---
 
-## Como Reproduzir os Experimentos
+## How to Reproduce the Experiments
 
-1.  Clone este repositório e entre na pasta:
+1. Clone this repository and enter the folder:
   ```bash
-  git clone [https://github.com/LABPAAD/nfts_classification.git](https://github.com/LABPAAD/nfts_classification.git)
+  git clone https://github.com/LABPAAD/nfts_classification.git
   cd nfts_classification
   ```
 
-2.  Inicie o servidor Jupyter:
+2.  Start the Jupyter server:
   ```bash
   jupyter notebook
   ```
 
-3.  No seu navegador, abra a pasta `/code`. Primeiro, execute o notebook `embeddings_code.ipynb` para processar os dados e gerar os arquivos de embeddings.
+3. In your browser, open the `/code` folder. First, run the `embeddings_code.ipynb` notebook to process the data and generate the embedding files.
 
-4.  Após a conclusão do primeiro notebook, execute o `Samuel_Embeddings[Exec-Local].ipynb` para carregar os embeddings, treinar os classificadores e gerar os CSVs de resultados finais.
+4. After the first notebook is complete, run `Samuel_Embeddings[Exec-Local].ipynb` to load the embeddings, train the classifiers, and generate the final result CSVs.
    
 ---
 
-## Aplicativo
+## Application
 
-Além desta pesquisa, foi desenvolvido um aplicativo web (Flask) que consome o modelo treinado.
- 
-* Repositório da aplicação: (https://github.com/markesley/NFT-Classifier)
+In addition to this research, a web application (Flask) was developed that consumes the trained model.
+
+* Application repository: (https://github.com/markesley/NFT-Classifier)
 
