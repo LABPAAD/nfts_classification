@@ -1,6 +1,6 @@
 # Classification of NFT Collections
 
-This repository contains the source code, Jupyter notebooks, and experimental results used in the research paper "NFT Collection Classification: A Multimodal Approach Integrating Metadata and Textual Embeddings with Supervised Learning," presented at the 35th Brazilian Conference on Intelligent Systems (Bracis 2025 <link: https://bracis.sbc.org.br/2025/>).
+This repository contains the source code, Jupyter notebooks, and experimental results used in the research paper "NFT Collection Classification: A Multimodal Approach Integrating Metadata and Textual Embeddings with Supervised Learning," presented at the 35th Brazilian Conference on Intelligent Systems (Bracis 2025 <link: https://bracis.sbc.org.br/2025/ >).
 
 The project explores different text preprocessing and data balancing techniques for classifying NFT collections into 7 categories.
 
